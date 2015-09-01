@@ -1,0 +1,240 @@
+========== Ioncube_Decoder 1.0.6  LogFile ==========
+
+=========> S t a g e  0  -  Getting RawData (UnBase64-Raw.bin)
+
+Opening e:\intel2400\Programmierung\Projekte\Ioncube_Decoder\Test\TestOut\TestOut\test1.php
+000000A6 -> Start of ionCubeData...
+00000301 -> 0000025B Bytes read.
+IC_Base64_Marker: '4+oV' Decoding Base64->Bin...
+
+=========> S t a g e  1  -  Validating RawData
+
+ionCubeVersionType: 3CCC22E1 [Encrypted: 149FEC13]
+ioncube_Version_Type 3
+
+=========> S t a g e  2  -  Processing RawData
+
+FileSizeKey: 2395BE5C (RawBinData_Size + 12321) Xor &H23958CDE
+RawBinData_Size: 00000261
+Header_Size: 000000B7 (InitKey for MT: 4C586BE8)
+Adler32(CRC) of ICDataPart+4..ICDataPart.EOS: 20D667CB
+
+=========> S t a g e  3  -  Extracting Header from RawData (->IC_Header.bin)
+
+
+=========> S t a g e  4  -  Interpreting IC_Header
+
+Minimum Loader Version: 00.00.00 (for ex. ioncube_loader_win_4.3.dll requires >0301010)
+VerData 0x00000003
+ObfuFlags 00000000 00000000
+
+ObfuFuncHashSeed: 
+Bytecode_XorKey: 0036C1BB
+IncludeXorKey: E9FC23B1
+EnableLicFile: 0
+CustomErrCallbackHandler: 'ioncube_event_handler'
+Enable_auto_prepend_Append_file: 0
+Customised error messages entries: 0x01
+  #03[no-permissions] => 'uigiu'
+Include file protection entries: 0x00
+Bytecode_MT_XorKey: 0036C1BB
+IC_HeaderEx start: 007F
+IC_HeaderEx end: 00A7   IC_Header HeaderSize: 00B7
+
+=========> S t a g e  5  -  Interpreting IC_HeaderEx
+
+0001 <-IC_Type_Minor
+0004 <-IC_Type_Major
+00000487 <-PhpFlags
+  0x0001  0001
+  0x0002  0002 
+  0x0004  0004 
+  0x0080  CmdBytesAreEncrypted
+  0x0400  EncryptStrings[KeyWord.c_Object] in memory during Compile& Execute
+
+IC Encoder Registration data: 0x10050603  0
+Copy of IncludeXorKey in Chunk_MoreData: 0xE9FC23B1
+unknown Data: 00000000 00000000 0000 B7 00
+EvalTimeMin: 0E0BEA82+[0500DA46]->C-TimeStamp: 4B148D89 ->~Year: 2009
+EvalTimeMax: 4615AD83+[3D08A307]->C-TimeStamp: 4B1687C9 ->~Year: 2009
+BodyStartOffset: 0x000000DD
+
+=========> S t a g e  6  -  Extracting & Inflating IC_body from RawData (->IC_body.bin)
+
+000000E1  Body_MT_Seed: DA63B690
+000000E5  Bytecode_MT_Seed: 861B1109
+
+=========> S t a g e  7  -  Reading IC_body
+
+
+=========> S t a g e  8  -  Read function body data
+
+Reading Body
+00000008 -> 00000004
+S2[Fixed Size 0x40]:
+0000004A ->  00000002
+ Skipped3 ->  00000000
+ SomeFlag ->  00000000
+ Scope(PHP5 only) ->  003A27C8
+ CmdData ->  003ABA18
+ Args ->  0000000E
+ ArgsMin ->  0000000E
+ php4Extra ->  00000009 00000002 00000001 FFFFFFFF 00000000 00000000
+ Skipped1 ->  00000000 00000000 00080000
+ PHPFileNamePtr -> 
+ 
+00000049 -> FunctionName:  function {MainFunction}
+ 
+00000052 -> 0000000E<-CmdCount
+byteCmds[Elementsize=0x4] Elements: 0000000F
+Command  Line
+-------------
+   0773  0004
+   071F  0004
+   07E0  0004
+   0792  0004
+   1EB9  0004
+   0008  0000
+   07D0  0005
+   0369  0005
+   0739  0005
+   02A0  0005
+   07F7  0004
+   0392  0004
+   02A4  0004
+   02F9  000C
+   02B0  000C
+CmdParams[Elementsize=0x10] Elements: 0000001F
+Type      Op1       Op2       Flags
+-----------------------------------
+00000004   00000000   00000000   00000000
+00000001   FFFFFE99   00000001   00020103
+00000008   00000001   00000000   00000000
+00000004   00000001   00000001   00000000
+00000004   00000000   00000000   00000000
+00000001   00000000   00000001   00020101
+00000004   00000002   00000000   00000000
+00000001   FFFFFE99   00000001   00020103
+00000008   00000001   00000000   00000000
+00000002   00000003   00000000   00000000
+00000004   00000002   00000000   00000000
+00000001   00000006   00000001   00020101
+00000002   00000003   00000000   00000000
+00000008   0000000C   00000000   00000000
+00000004   00000006   00000000   00000000
+00000001   FFFFFF14   00000001   00020103
+00000008   00000001   00000000   00000000
+00000004   00000007   00000000   00000000
+00000004   00000006   00000000   00000000
+00000002   00000008   00000000   00000000
+00000004   00000007   00000000   00000000
+00000001   0000000E   00000001   00020103
+00000002   00000008   00000000   00000000
+00000004   00000004   00000000   00000000
+00000001   FFFFFE99   00000001   00020103
+00000008   00000001   00000000   00000000
+00000002   00000005   00000001   00000000
+00000004   00000004   00000000   00000000
+00000008   00000002   00000000   00000000
+00000001   00000010   00000001   00020103
+00000001   00000001   00000038   00020101
+StringData [00000012]
+0000029C -> C0 DE 09 00 00 00 0C 00 00 00 FF FF FF FF 0A 00 20 00 
+Ро	......џџџџ
+. .
+Length of unprocessed data: 00000004
+
+=========> S t a g e  9  -  Interpreting IC_body/ByteCode
+
+Command #0000: 0x53 (Encry: 0x73)   Flags: 0x07 LineNo(cmd): 0x0004
+result: 04->VAR     00000000 00000000  00->NULL   00->val 0000
+op1   : 01->CONST   FFFFFE99 00000001  03->STRING 01->ref 0002
+        KeyWord: n
+op2   : 08->UNUSED  00000001 00000000  00->NULL   00->val 0000
+ZEND_FETCH_W  ESP:1   $n
+______________________________________________________________________
+Command #0001: 0x26 (Encry: 0x1F)   Flags: 0x07 LineNo(cmd): 0x0004
+result: 04->VAR     00000001 00000001  00->NULL   00->val 0000
+op1   : 04->VAR     00000000 00000000  00->NULL   00->val 0000
+op2   : 01->CONST   00000000 00000001  01->LONG   01->ref 0002
+ZEND_ASSIGN  ESP:0   <Empty>
+$n=0;
+______________________________________________________________________
+Command #0002: 0x50 (Encry: 0xE0)   Flags: 0x07 LineNo(cmd): 0x0004
+result: 04->VAR     00000002 00000000  00->NULL   00->val 0000
+op1   : 01->CONST   FFFFFE99 00000001  03->STRING 01->ref 0002
+        KeyWord: n
+op2   : 08->UNUSED  00000001 00000000  00->NULL   00->val 0000
+ZEND_FETCH_R  ESP:1   $n
+______________________________________________________________________
+Command #0003: 0x13 (Encry: 0x92)   Flags: 0x07 LineNo(cmd): 0x0004
+result: 02->TMP_VAR 00000003 00000000  00->NULL   00->val 0000
+op1   : 04->VAR     00000002 00000000  00->NULL   00->val 0000
+op2   : 01->CONST   00000006 00000001  01->LONG   01->ref 0002
+ZEND_IS_SMALLER  ESP:1   $n<6
+______________________________________________________________________
+Command #0004: 0x2B (Encry: 0xB9)   Flags: 0x1E LineNo(cmd): 0x0004
+op1   : 02->TMP_VAR 00000003 00000000  00->NULL   00->val 0000
+op2   : 08->UNUSED  0000000C 00000000  00->NULL   00->val 0000
+        extended_value(from File): 0008
+ZEND_JMPZ Conditional jmp to #0000000C ESP:0   <Empty>
+while ($n<6) {
+______________________________________________________________________
+Command #0005: 0x56 (Encry: 0xD0)   Flags: 0x07 LineNo(cmd): 0x0005
+result: 04->VAR     00000006 00000000  00->NULL   00->val 0000
+op1   : 01->CONST   FFFFFF14 00000001  03->STRING 01->ref 0002
+        KeyWord: i
+op2   : 08->UNUSED  00000001 00000000  00->NULL   00->val 0000
+ZEND_FETCH_RW  ESP:1   $i
+______________________________________________________________________
+Command #0006: 0x22 (Encry: 0x69)   Flags: 0x03 LineNo(cmd): 0x0005
+result: 04->VAR     00000007 00000000  00->NULL   00->val 0000
+op1   : 04->VAR     00000006 00000000  00->NULL   00->val 0000
+ZEND_PRE_INC  ESP:1   ++$i
+______________________________________________________________________
+Command #0007: 0x08 (Encry: 0x39)   Flags: 0x07 LineNo(cmd): 0x0005
+result: 02->TMP_VAR 00000008 00000000  00->NULL   00->val 0000
+op1   : 04->VAR     00000007 00000000  00->NULL   00->val 0000
+op2   : 01->CONST   0000000E 00000001  03->STRING 01->ref 0002
+        KeyWord: 
+
+ZEND_CONCAT  ESP:1   ++$i."\n"
+______________________________________________________________________
+Command #0008: 0x28 (Encry: 0xA0)   Flags: 0x02 LineNo(cmd): 0x0005
+op1   : 02->TMP_VAR 00000008 00000000  00->NULL   00->val 0000
+ZEND_ECHO  ESP:0   <Empty>
+echo ++$i."\n";
+______________________________________________________________________
+Command #0009: 0x56 (Encry: 0xF7)   Flags: 0x07 LineNo(cmd): 0x0004
+result: 04->VAR     00000004 00000000  00->NULL   00->val 0000
+op1   : 01->CONST   FFFFFE99 00000001  03->STRING 01->ref 0002
+        KeyWord: n
+op2   : 08->UNUSED  00000001 00000000  00->NULL   00->val 0000
+ZEND_FETCH_RW  ESP:1   $n
+______________________________________________________________________
+Command #000A: 0x22 (Encry: 0x92)   Flags: 0x03 LineNo(cmd): 0x0004
+result: 02->TMP_VAR 00000005 00000001  00->NULL   00->val 0000
+op1   : 04->VAR     00000004 00000000  00->NULL   00->val 0000
+ZEND_PRE_INC  ESP:1   ++$n
+______________________________________________________________________
+Command #000B: 0x2A (Encry: 0xA4)   Flags: 0x02 LineNo(cmd): 0x0004
+op1   : 08->UNUSED  00000002 00000000  00->NULL   00->val 0000
+ZEND_JMP  ESP:1   ++$n
+++$n;
+}
+______________________________________________________________________
+Command #000C: 0x28 (Encry: 0xF9)   Flags: 0x02 LineNo(cmd): 0x000C
+op1   : 01->CONST   00000010 00000001  03->STRING 01->ref 0002
+        KeyWord:  
+ZEND_ECHO  ESP:0   <Empty>
+echo " ";
+______________________________________________________________________
+Command #000D: 0x3E (Encry: 0xB0)   Flags: 0x02 LineNo(cmd): 0x000C
+op1   : 01->CONST   00000001 00000038  01->LONG   01->ref 0002
+ZEND_RETURN  ESP:0   <Empty>
+Return 1;
+______________________________________________________________________
+FunctionsCount: 0000
+Classes: 0000
+File sucessfully processes!
+

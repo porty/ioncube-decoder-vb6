@@ -1,0 +1,62 @@
+
+Sample:
+	#0024: 0x28 ZEND_ECHO   LineNo: 0x0012  Flags: 0x02()
+	op1   : 01->CONST   000000EC 00000016  03->STRING 01->ref 0002
+	        KeyWord: <h3>Pre-Dekrement</h3>
+	====================================================================
+	echo "<h3>Pre-Dekrement</h3>";
+
+Explanation:
+	#0024: 0x28 ZEND_ECHO   LineNo: 0x0012  Flags: 0x02()
+	 ^^^^- Counts Commands
+	
+	#0024: 0x28 ZEND_ECHO   LineNo: 0x0012  Flags: 0x02()
+	       ^^^^- Commandopcode & Mnemonic
+	
+	#0024: 0x28 ZEND_ECHO   LineNo: 0x0012  Flags: 0x02()
+	                                  ^^^^- LineNummer in the sourcecode
+	
+	#0024: 0x28 ZEND_ECHO   LineNo: 0x0012  Flags: 0x02()
+	                                                 ^^- Flag that masks if 'Result', 'op1', 'op2' are in use
+	
+
+op1   : 01->CONST   000000EC 00000016  03->STRING 01->ref 0002
+        ^^-Type for reading the following data
+
+op1   : 01->CONST   000000EC 00000016  03->STRING 01->ref 0002
+                        ^^^^     ^^^^ start offset & Length (in StringSections) for const strings Or StorageID for VAR and TMP_VAR
+        KeyWord: <h3>Pre-Dekrement</h3>
+
+op1   : 01->CONST   000000EC 00000016  03->STRING 01->ref 0002
+                                       ^^-OutputVartype
+                                       
+op1   : 01->CONST   000000EC 00000016  03->STRING 01->ref 0002
+                                                  ^^ is reference to StringSections or normal variable
+
+op1   : 01->CONST   000000EC 00000016  03->STRING 01->ref 0002
+                                                          ^^^^ Don't know maybe type for reference (0002 <= String)
+_____________________________________________________________________
+
+
+SerialiseDate.JSS
+{"opcode":40,
+ "result":[8,-1],
+ "op1":[1,<h3>Pre-Inkrement</h3>],
+ "op2":[8,-1]
+}         ^^ if it's '01->ref' the string is used (else it would 000000EC regarding the example); '-1' means empty/not used
+          
+  
+  Considerations about lose of data:
+  #1  LineNo: 0x0012  - uncritical 
+  #2  Flags: 0x02() - uncritical already handled care for by this decoder
+  #3  '00000016' - TODO Check if that parameter is always used (except for Stringlength)
+! #4  03->STRING  - Type of OutputVar; That maybe important for Decompilation
+  #5  0002 - uncritical; Probably not really important
+  #6  (Not in the Sample)   'extended_value(from Flag): 0001 or
+                            'extended_value(from File): 003D'
+       ^^Maybe important for class and object stuff.
+
+  Other Limitation so far:
+  *  Doesn't cares for functions and scope attribs. ('Public', 'Private', FunctionNames...)
+  *  Works only for one function!
+     If there are more functions 'SerialiseDate.JSS' gets overwritten and has in the end only the last functionbody data
